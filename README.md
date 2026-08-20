@@ -98,21 +98,4 @@ up to ~30 seconds on CPU). This happens only once per session.
 
 ---
 
-## Deploying online later
-
-The app already runs on CPU, so it is deployment-ready. Two common options:
-
-- **Hugging Face Spaces** (free tier, easiest): create a new Space with the
-  "Streamlit" SDK, upload these files, and add your `.pth` checkpoints. Note
-  the free tier has limited storage (your 12 checkpoints total ~1.5 GB, so you
-  may need to host the weights externally or use a smaller subset).
-- **Streamlit Community Cloud** (free): connect a GitHub repo. Because your
-  checkpoints are large, store them with Git LFS or download them at startup
-  from cloud storage.
-
-When deploying, change `DEFAULT_WEIGHTS_DIR` in `app.py` to a relative path
-like `"./models"` and include the checkpoints in that folder.
-
----
-
 *For research and educational use only — not a medical diagnostic device.*
