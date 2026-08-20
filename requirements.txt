@@ -1,0 +1,21 @@
+# ======================================================================
+# LC25000 Web App — Python dependencies
+# ======================================================================
+#
+# IMPORTANT: Do NOT add torch/torchvision here.
+# Your RTX 5060 needs the CUDA 12.8 build, which must be installed
+# separately FIRST (see README.md, Step 1):
+#
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+#
+# Then install everything below with:
+#
+#   pip install -r requirements.txt
+# ======================================================================
+
+streamlit>=1.40
+timm>=1.0.0
+pillow>=10.0
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
