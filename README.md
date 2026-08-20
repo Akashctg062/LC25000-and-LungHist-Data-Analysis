@@ -115,25 +115,4 @@ like `"./models"` and include the checkpoints in that folder.
 
 ---
 
-## Troubleshooting
-
-**"No models could be loaded"** — the weights folder path is wrong. Fix it in
-the sidebar text box. The folder must contain files named exactly
-`{ModelName}_best.pth`.
-
-**Predictions look random / wrong** — make sure the `.pth` files are your
-*trained* checkpoints, not fresh ones. Also confirm `CLASS_NAMES` in `models.py`
-matches the class order used during training (alphabetical:
-colon_aca, colon_n, lung_aca, lung_n, lung_scc).
-
-**App is slow on CPU** — that's expected. 12 models × one image takes a few
-seconds on CPU versus well under a second on your RTX 5060. Make sure PyTorch
-sees your GPU: the sidebar should say `Compute device: CUDA`.
-
-**Grad-CAM says "not available"** — this is expected for ViT-Base, Swin-Tiny,
-and DPCT-Net. Grad-CAM needs a convolutional feature map with gradients, which
-those three architectures don't expose. The other 9 models support it.
-
----
-
 *For research and educational use only — not a medical diagnostic device.*
